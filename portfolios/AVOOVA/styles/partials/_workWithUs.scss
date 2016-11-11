@@ -1,0 +1,49 @@
+.workWithUs .wrapper {
+	margin-top: 160px;
+	padding: 58px 60px;
+	text-align: center;
+	border: 1px solid $lightGray;
+	width: 45%;
+	@media (max-width: 768px) {
+		width: 80%;
+		margin-top: 100px;
+	}
+	@media (max-width: 480px) {
+		padding: 30px 35px;
+	}
+	@media (max-width: 414px) {
+		width: 95%;
+		padding: 20px 20px;
+	}
+	h2 {
+		font-family: $josefin;
+		color: $onyx;
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+	}
+	h5 {
+		color: $onyx;
+		font-size: 1.2rem;
+		font-family: $josefin;
+		font-weight: 600;
+		position: relative;
+		@media (max-width: 480px) {
+			text-decoration: underline;
+		}
+	}
+	h5::after {
+		content: "\f178";
+		font-family: FontAwesome;
+		position: absolute;
+		font-size: 1.2rem;
+		color: $onyx;
+		right: 154px;
+		bottom: 1px;
+	}
+	@media (max-width: 1230px) {
+		h5::after {
+			content: none;
+		}
+	}
+}
+

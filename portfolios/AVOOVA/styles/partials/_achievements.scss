@@ -1,0 +1,74 @@
+.achievements {
+	@media (max-width: 480px) {
+		display: none;
+	}
+}
+
+.achievements .wrapper {
+	background: $lightPink;
+	padding: 100px 0;
+	margin-bottom: 150px;
+	@media (max-width: 768px) {
+		margin-bottom: 100px;
+	}
+	ul {
+		display: flex;
+		justify-content: space-around;
+		margin: 0;
+		padding: 0;
+		li {
+			background: white;
+			list-style-type: none;
+			width: 170px;
+			height: 170px;
+			border-radius: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			text-align: center;
+			@media (max-width: 940px) {
+				width: 120px;
+				height: 120px;
+			}
+			@media (max-width: 600px) {
+				width: 100px;
+				height: 100px;
+			}
+			h2 {
+				color: $darkerPink;
+				font-family: $crimson;
+				font-size: 2rem;
+				margin: 0;
+				letter-spacing: 1px;
+			}
+			p {
+				font-family: $josefin;
+				font-size: 1rem;
+				color: $onyx;
+				font-weight: 600;
+				letter-spacing: 1px;
+				@media (max-width: 600px) {
+					font-size: 0.8rem;
+				}
+			}
+		}
+		li::after {
+			content: "";
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background: $onyx;
+			position: absolute;
+			display: block;
+			right: -18%;
+			@media (max-width: 1230px) {
+				content: none;
+			}
+		}
+		:last-child::after {
+			content: none;
+		}
+	}
+}

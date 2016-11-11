@@ -1,0 +1,32 @@
+.skills {
+	padding-top: 10px;
+}
+
+ul.skills__icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	margin: 0 auto;
+	li {
+		width: 31%;
+		color: #c9cdd0;
+		text-align: center;
+		margin: 5px;
+		margin-bottom: 10px;
+		i {
+			font-size: 6rem;
+		}
+		p {
+			margin: 10px 0;
+			font-size: 1.5rem;
+			font-family: $lato;
+			color: inherit;
+		}
+	}
+	li:hover,
+	li:focus {
+		color: $darkGray;
+	}
+}

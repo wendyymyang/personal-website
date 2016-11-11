@@ -1,0 +1,23 @@
+.about {
+	padding: 100px;
+	.wrapper {
+		width: 65%;
+	}
+}
+
+.about p {
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+	margin: 20px;
+	letter-spacing: 0.5px;
+}
+
+.about a {
+	text-decoration: none;
+	border-bottom: 1px dotted $darkGray;
+	color: $darkGray;
+	&:hover, &:focus {
+		color: $turquoise;
+		border-color: $turquoise;
+	}
+}

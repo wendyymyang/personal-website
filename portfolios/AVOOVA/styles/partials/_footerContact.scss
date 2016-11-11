@@ -1,0 +1,257 @@
+.footerContact .wrapper {
+	background: $lightPink;
+	margin-top: 160px;
+	padding-bottom: 115px;
+	@media (max-width: 768px) {
+		margin-top: 100px;
+	}
+	@media (max-width: 580px) {
+		padding-bottom: 20px;
+	}
+	.footerContactInformation {
+		background: white;
+		width: 90%;
+		margin: 0 auto;
+		padding: 50px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		@media (max-width: 768px) {
+			width: 95%;
+		}
+		@media (max-width: 480px) {
+			padding: 10px 0;
+			text-align: center;
+			background: $lightPink;
+		}
+		.officeContactContainer,
+		.socialMediaContainer {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			@media (max-width: 480px) {
+				display: block;
+			}
+			h5 {
+				color: $onyx;
+				font-size: 1.2rem;
+				font-family: $josefin;
+				font-weight: 600;
+				position: relative;
+			}
+			p {
+				margin: 0;
+			}
+			h5 {
+				@media (max-width: 480px) {
+					margin: 15px 0;
+				}
+			}
+			h5, p {
+				@media (max-width: 740px) {
+					font-size: 1.1rem;
+				}
+				@media (max-width: 480px) {
+					font-size: 1.5rem;
+				}
+			}
+			.office {
+				margin-left: 35px;
+				width: 35%;
+				@media (max-width: 800px) {
+					margin-left: 15px;
+				}
+			}
+			.logo {
+				text-align: center;
+				margin: 0 auto;
+				@media (max-width: 480px) {
+					display: none;
+				}
+				h2 {
+					color: $onyx;
+					font-size: 1.5rem;
+					letter-spacing: 1.7rem;
+					padding-left: 1.7rem;
+					margin: 0;
+					margin-top: 20px;
+					@media (max-width: 740px) {
+						font-size: 1.1rem;
+					}
+				}
+				h6 {
+					font-family: 'Lobster', cursive;
+					font-size: 1.3rem;
+					margin-top: 10px;
+					@media (max-width: 740px) {
+						font-size: 1.1rem;
+					}
+				}
+			}
+			.contact {
+				text-align: right;
+				width: 35%;
+				margin-right: 35px;
+				@media (max-width: 800px) {
+					margin-right: 15px;
+				}
+				@media (max-width: 480px) {
+					display: none;
+				}
+			}
+			.office,
+			.contact {
+				@media (max-width: 480px) {
+					text-align: center;
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+		}
+		.socialMediaContainer {
+			font-family: $crimson;
+			color: $onyx;
+			@media (max-width: 580px) {
+				flex-direction: column;
+				align-items: center;
+			}
+			@media (max-width: 480px) {
+				margin: 35px 0;
+			}
+			> a {
+				margin-left: 35px;
+				text-decoration: none;
+				color: $onyx;
+				font-size: 1.5rem;
+				width: 33%;
+				letter-spacing: 0.07rem;
+				@media (max-width: 800px) {
+					margin-left: 15px;
+				}
+				@media (max-width: 740px) {
+					font-size: 1.1rem;
+				}
+				@media (max-width: 580px) {
+					margin: 15px 0;
+					width: 100%;
+					text-align: center;
+					font-size: 1.5rem;
+					text-decoration: underline;
+				}
+				@media (max-width: 480px) {
+					font-size: 1.5rem;
+					margin: 10px 0;
+				}
+			}
+			a:hover {
+				color: $darkerPink;
+			}
+			> a:last-of-type {
+				text-align: right;
+				margin-right: 35px;
+				margin-left: 0;
+				@media (max-width: 800px) {
+					margin-right: 15px;
+				}
+				@media (max-width: 580px) {
+					margin: 15px 0;
+					text-align: center;
+				}
+			}
+		}
+		.socialMediaContainer ul{
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			padding: 0;
+			width: 33%;
+			li {
+				list-style-type: none;
+				margin: 0;
+				padding: 0 5px;
+				a {
+					text-decoration: underline;
+					color: $onyx;
+					font-size: 1.5rem;
+					letter-spacing: 0.07rem;
+					@media (max-width: 740px) {
+						font-size: 1.1rem;
+					}
+					@media (max-width: 580px) {
+						font-size: 1.5rem;
+						color: $darkerPink;
+					}
+					@media (max-width: 480px) {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+	.footerContactInformation::after {
+		content: "\f176";
+		font-family: FontAwesome;
+		color: $onyx;
+		font-size: 2rem;
+		bottom: -10px;
+		position: absolute;
+		@media (max-width: 1230px) {
+			content: none;
+		}
+	}
+}
+
+.footerContact .footerNav ul{
+	display: none;
+	@media (max-width: 414px) {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		@media (max-width: 340px) {
+			justify-content: space-around;
+		}
+		li {
+			list-style-type: none;
+			padding: 0 20px;
+			position: relative;
+			@media (max-width: 340px) {
+				padding: 0;
+			}
+			a {
+				text-decoration: none;
+				color: $onyx;
+				font-family: $josefin;
+				font-weight: 600;
+			}
+		}
+		li::after {
+			content: "";
+			height: 2px;
+			background: $onyx;
+			width: 20px;
+			display: block;
+			position: absolute;
+			bottom: 50%;
+			transform: translateY(50%);
+			margin: 0 20px;
+			left: 64%;
+			@media (max-width: 375px) {
+				width: 3px;
+				height: 3px;
+				border-radius: 50%;
+				left: 69%;
+			}
+			@media (max-width: 340px) {
+				left: 79%;
+			}
+		}
+		li:last-of-type::after {
+			content: none;
+		}
+	}
+}
+
+
+

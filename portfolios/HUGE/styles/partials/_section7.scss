@@ -1,0 +1,133 @@
+.section7 {
+	background-image: linear-gradient(rgba(60,170,224,0.7), rgba(60,170,224,0.7)) ,url('../images/mountainbackground-min.jpeg');
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		> .section7col {
+			font-size: 0;
+		}
+		.section7col {
+			width: 50%;
+			padding: 50px 30px;
+			> img {
+				width: 100%;
+			}
+			.gallerycover {
+				background: #68bf9b;
+				opacity: 0.7;
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding: 17px 0;
+				margin: 0 auto;
+				img {
+					width: 13%;
+					border: 2px solid rgba(255,255,255,0.6);
+					border-radius: 50%;
+					opacity: 0.6;
+				}
+				img:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.section7col h2 + p {
+	padding-right: 36px;
+}
+
+.section7col:last-of-type {
+	color: white;
+	p {
+		font-size: 1.3rem;
+		opacity: 0.8;
+	}
+	.gallerytext {
+		display: inline-block;
+		width: 50%;
+		padding-right: 36px;
+		.gallerytextflex {
+			display: flex;
+			align-items: center;
+			i {
+				font-size: 2rem;
+				color: white;
+				padding-right: 10px;
+			}
+			h6 {
+				color: white;
+				margin: 0;
+				padding: 20px 0;
+			}
+		}
+	}
+}
+
+.section7col button {
+	font-size: 1.3rem;
+	color: $h6gray;
+	background: white;
+	padding: 15px 35px;
+	border: none;
+	margin-top: 30px;
+	font-weight: 600;
+}
+
+@media (max-width: 840px) {
+	.section7 .wrapper {
+		flex-direction: column;
+		margin: 0 auto;
+		> .section7col {
+			width: 70%;
+			order: 2;
+			.gallerycover img{
+				opacity: 1;
+			}
+		}
+		.section7col + .section7col {
+			order: 1;
+			width: 80%;
+			.gallerytext {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 640px) {
+	.section7 .wrapper > .section7col {
+		width: 95%;
+	}
+	.section7 .wrapper .section7col + .section7col {
+		width: 95%;
+	}
+}
+
+@media (max-width: 460px) {
+	.section7 .wrapper .section7col + .section7col {
+		.gallerytext {
+			display: block;
+			width: 100%;
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
