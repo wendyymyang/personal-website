@@ -1,5 +1,6 @@
 .portfolio {
 	padding-top: 10px;
+	padding-bottom: 100px;
 }
 
 .portfolio ul {
@@ -7,12 +8,10 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	li {
-		width: 50%;
+		width: calc(40% - 40px);
 		position: relative;
-		flex-basis: 280px;
-		flex-grow: 1;
-		margin: 12px;
-		transition: 0.3s;
+		margin: 20px;
+		transition: all 0.3s ease;
 		img {
 			width: 100%;
 			height: 100%;
@@ -41,12 +40,17 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+			background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 			visibility: hidden;
 			border-radius: 2%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
 			p {
 				text-align: center;
 				letter-spacing: 1px;
+				line-height: 2rem;
 				font-weight: 300;
 				color: white;
 				font-family: $roboto;
@@ -54,10 +58,29 @@
 				margin-top: 150px;
 				padding: 0 10px;
 			}
+			a {
+				text-align: center;
+				text-decoration: none;
+				letter-spacing: 1px;
+				font-weight: 300;
+				color: white;
+				font-family: $roboto;
+				font-size: 1.4rem;
+				margin-top: 30px;
+				border: 1px solid white;
+				border-radius: 2px;
+				padding: 10px 30px;
+				&:hover, &:focus, &:active {
+					background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+				}
+			}
 		}
 	}
-	li:hover, li:focus {
-		transform: scale(1.11,1.11);
+	li:hover, li:focus, li:active {
+		z-index: 50;
+		overflow: hidden;
+		border-radius: 2%;
+		transform: scale(1.05, 1.05);
 		cursor: pointer;
 	}
 	li:hover .portfolioCover,
@@ -69,5 +92,121 @@
 		visibility: visible;
 	}
 }
+
+@media (max-width: 940px) {
+	.portfolio ul {
+		li {
+			.portfolioCover {
+				h4 {
+					margin-top: 50px;
+				}
+			}
+			.portfolioCoverHidden {
+				p {
+					margin-top: 100px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolio ul {
+		li {
+			.portfolioCover {
+				h4 {
+					font-size: 1.3rem;
+				}
+			}
+			.portfolioCoverHidden {
+				p,
+				a {
+					font-size: 1.2rem;
+				}
+				a {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.portfolio ul {
+		li {
+			width: 60%;
+			.portfolioCover {
+				h4 {
+					font-size: 1.5rem;
+					margin-top: 100px;
+				}
+			}
+			.portfolioCoverHidden {
+				p {
+					font-size: 1.4rem;
+					margin-top: 100px;
+				}
+				a {
+					font-size: 1.4rem;
+					margin-top: 30px;
+				}
+			}	
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.portfolio ul {
+		li {
+			.portfolioCoverHidden {
+				p {
+					margin-top: 137px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	.portfolio ul {
+		li {
+			.portfolioCover {
+				h4 {
+					margin-top: 80px;
+					font-size: 1.3rem;
+				}
+			}
+			.portfolioCoverHidden {
+				p {
+					margin-top: 120px;
+					font-size: 1.2rem;
+				}
+				a {
+					margin-top: 10px;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 330px) {
+	.portfolio ul {
+		li {
+			.portfolioCover {
+				h4 {
+					margin-top: 30px;
+				}
+			}
+			.portfolioCoverHidden {
+				p {
+					margin-top: 80px;
+				}
+			}
+		}
+	}
+}
+
+
 
 

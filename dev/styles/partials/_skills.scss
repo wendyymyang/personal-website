@@ -1,32 +1,83 @@
 .skills {
+	height: 100vh;
 	padding-top: 10px;
-}
-
-ul.skills__icons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	width: 70%;
-	margin: 0 auto;
-	li {
-		width: 31%;
-		color: #c9cdd0;
-		text-align: center;
-		margin: 5px;
-		margin-bottom: 10px;
-		i {
-			font-size: 6rem;
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		.skills_icons {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 70%;
+			margin: 0 auto;
+			li {
+				width: calc(25% - 10px);
+				color: #c9cdd0;
+				text-align: center;
+				margin: 5px;
+				margin-bottom: 10px;
+				i {
+					font-size: 6rem;
+				}
+				p {
+					margin: 10px 0;
+					font-size: 1.5rem;
+					font-family: $lato;
+					color: inherit;
+				}
+			}
+			li:hover,
+			li:focus {
+				color: $darkGray;
+			}
 		}
-		p {
-			margin: 10px 0;
-			font-size: 1.5rem;
-			font-family: $lato;
-			color: inherit;
+		.nextIconToPortfolios {
+			color: $darkGray;
+			border: none;
+			width: 57px;
+			height: 71.25px;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
-	li:hover,
-	li:focus {
-		color: $darkGray;
+}
+
+@media (max-width: 768px) {
+	.skills {
+		.wrapper {
+			.skills_icons {
+				width: 90%;
+			}
+		}
+		.nextIconToPortfolios {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.skills {
+		height: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.skills {
+		.wrapper {
+			.skills_icons {
+				li {
+					i {
+						font-size: 4rem;
+					}
+				}
+			}
+		}
 	}
 }
