@@ -70,6 +70,7 @@ $(function() {
         }, 300);
 
         $(window).scrollTop(0);
+        location.reload(true);
       }
     }; 
   });
